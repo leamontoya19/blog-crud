@@ -1,10 +1,13 @@
 $lightGreen : #b9e7e7;
 
 .app{
+    display: flex;
+    justify-content: center;
 
    .container{
-    
-     //Login & Register
+    width: 1024px;
+
+    //lOGIN & REGISTER
       .auth{
         display: flex;
         flex-direction: column;
@@ -51,13 +54,18 @@ $lightGreen : #b9e7e7;
                 font-size: 12px;
                 text-align: center;
             }
+        }
+    }
 
-
-
+      //NAVBAR 
+      .navbar{
+        .container{
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            .logo{}
+            .links{}
         }
       }
-
-
-
-   } 
+    } 
 }
