@@ -1,8 +1,14 @@
 import React from 'react'
 
-function Write() {
+const Write = () => {
   return (
-    <div>Write</div>
+    <div className='write'>
+      <div className="content">content</div>
+      <div className="menu">
+        <div className="item">item1</div>
+        <div className="item">item2</div>
+      </div>
+    </div>
   )
 }
 
