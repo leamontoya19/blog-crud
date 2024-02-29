@@ -78,10 +78,15 @@ Esta es una aplicación web de blog que permite realizar operaciones CRUD (Crear
 
 ## Configuración
 
-1. **Clonar el Repositorio**:
+1. **Clonar el Repositorio**:https://github.com/leamontoya19/blog-crud.git
 
-2. **Instalar Dependencias del Frontend**:
+2. **Instalar Dependencias del Frontend**:cd client
+npm install
 
+3. **Instalar Dependencias del Backend**:cd api
+npm install
+
+  
 4. **Configuración de la Base de Datos**:
 - Instala y configura MySQL en tu sistema.
 - Crea una nueva base de datos para la aplicación.
