@@ -1,8 +1,8 @@
-import mysql from "mysql"
+import { Sequelize } from 'sequelize';
 
-export const db = mysql.createConnection({
-   host:"localhost",
-   user:"root",
-   password: "root",
-   database:"db_blog"
-})
+const db = new Sequelize('db_blog', 'root', 'root', {
+  host: 'localhost',
+  dialect: 'mysql'
+});
+
+export default db;

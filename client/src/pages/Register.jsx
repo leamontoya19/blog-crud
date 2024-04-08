@@ -24,13 +24,11 @@ console.log (inputs)
 const handleSubmit= async(e) => {
   e.preventDefault();
   try{
-    // const res = 
-    await axios.post("/auth/register", inputs);
+    const res = await axios.post("/auth/register", inputs);
     navigate("/login");
-
-    // console.log(res)
+    console.log(res)
   } catch (err){
-    // console.log(err)
+    console.log(err)
   // setError(err, response.data);
   }
 }
