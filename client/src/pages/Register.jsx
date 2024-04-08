@@ -15,8 +15,9 @@ const Register= () => {
 const navigate = useNavigate();
 
 const handleChange = (e) =>{
-  setInputs( (prev) => ({...prev, [e.target.username]: e.target.value}));
+  setInputs( (prev) => ({...prev, [e.target.name]: e.target.value}));
 };
+console.log (inputs)
 
 //SETTING THE ENDPOINT
 
