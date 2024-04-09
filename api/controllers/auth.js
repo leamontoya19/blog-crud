@@ -6,7 +6,7 @@ export const register = async (req, res) => {
         // Verifica si el usuario ya existe en la base de datos
         const existingUser = await User.findOne({
             where: {
-                [Op.or]: [{ email: req.body.email }, { username: req.body.username }]
+                [Op.or]: [{ email: req.body.email }, { username: req.body.name }]
             }
         });
         
