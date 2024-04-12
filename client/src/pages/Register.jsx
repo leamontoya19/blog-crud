@@ -10,7 +10,7 @@ const Register= () => {
     password:"",
   })
 
-// const [err, setError] = useState (null);
+const [err, setError] = useState (null);
 
 const navigate = useNavigate();
 
@@ -29,7 +29,7 @@ const handleSubmit= async(e) => {
     console.log(res)
   } catch (err){
     console.log(err)
-  // setError(err, response.data);
+  setError(err.response.data);
   }
 }
 
@@ -58,7 +58,7 @@ const handleSubmit= async(e) => {
         onChange={handleChange}
         />
         <button onClick={handleSubmit}>Register</button>
-        {/* {err && <p>{err} </p>} */}
+        {err && <p>{err} </p>} 
         <span>Already have an account? <Link to="/login">Login</Link>
         </span>
       </form>

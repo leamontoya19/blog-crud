@@ -1,9 +1,11 @@
 import bcrypt from "bcrypt";
 import User  from "../models/UserModel.js"; 
+import { Op } from "sequelize";
+
 
 export const register = async (req, res) => {
     try {
-        // Verifica si el usuario ya existe en la base de datos
+        // Aquí verifico si el usuario ya existe en la base de datos
         const existingUser = await User.findOne({
             where: {
                 [Op.or]: [{ email: req.body.email }, { username: req.body.name }]
@@ -24,11 +26,10 @@ export const register = async (req, res) => {
             email: req.body.email,
             password: hash
         });
-
         return res.status(200).json({ message: "User created successfully" });
-    } catch (error) {
+         } catch (error) {
         return res.status(500).json({ error: error.message });
-    }
+         }
 };
 
 
